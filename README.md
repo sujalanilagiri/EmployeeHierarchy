@@ -1,4 +1,7 @@
 This project shows the Hierarchial Display of Employee Data
+
+The input data is given as an array in App.js
+
 ## Available Scripts
 
 In the project directory, you can run:
