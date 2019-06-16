@@ -1,24 +1,19 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import  EmployeeTree from '../src/components/EmployeeTree/EmployeeTree.js'
 
+const EmployeeData = [
+  { employeeName: "Alan", employeeId: "100", managerId: "150" },
+  { employeeName: "Martin", employeeId: "220", managerId: "220" },
+  { employeeName: "Jamie", employeeId: "150", managerId: "" },
+  { employeeName: "Alex", employeeId: "275", managerId: "100" },
+  { employeeName: "Steve", employeeId: "400", managerId: "150" },
+  { employeeName: "David", employeeId: "190", managerId: "400" }
+];
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <EmployeeTree EmployeeData={EmployeeData}/>
     </div>
   );
 }

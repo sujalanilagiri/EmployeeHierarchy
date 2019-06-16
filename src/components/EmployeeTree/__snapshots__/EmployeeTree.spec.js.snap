@@ -1,0 +1,232 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmployeeTreeComponent should not only valid employee hierarchy 1`] = `
+<Fragment>
+  <div
+    className="App"
+    id="initechOrgChart"
+  >
+    <OrgChart
+      NodeComponent={[Function]}
+      tree={
+        Object {
+          "value": Object {
+            "employeeId": "250",
+            "employeeName": "Jimmy",
+            "managerId": "",
+          },
+        }
+      }
+    />
+    <RejectedList
+      data={
+        Array [
+          Object {
+            "name": Array [
+              "Martin",
+            ],
+            "reason": "Duplicate Entry of Employee",
+          },
+          Object {
+            "name": Array [
+              "100",
+            ],
+            "reason": "Manager is not a valid Employee",
+          },
+          Object {
+            "name": Array [
+              "150",
+            ],
+            "reason": "Manager is not a valid Employee",
+          },
+          Object {
+            "name": Array [
+              "400",
+            ],
+            "reason": "Manager is not a valid Employee",
+          },
+        ]
+      }
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`EmployeeTreeComponent should not render duplicate records 1`] = `
+<Fragment>
+  <div
+    className="App"
+    id="initechOrgChart"
+  >
+    <OrgChart
+      NodeComponent={[Function]}
+      tree={
+        Object {
+          "value": Object {
+            "employeeId": "250",
+            "employeeName": "Jimmy",
+            "managerId": "",
+          },
+        }
+      }
+    />
+    <RejectedList
+      data={
+        Array [
+          Object {
+            "name": Array [
+              "Martin",
+            ],
+            "reason": "Duplicate Entry of Employee",
+          },
+          Object {
+            "name": Array [
+              "100",
+            ],
+            "reason": "Manager is not a valid Employee",
+          },
+          Object {
+            "name": Array [
+              "150",
+            ],
+            "reason": "Manager is not a valid Employee",
+          },
+          Object {
+            "name": Array [
+              "400",
+            ],
+            "reason": "Manager is not a valid Employee",
+          },
+        ]
+      }
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`EmployeeTreeComponent should not render tree when no CEO 1`] = `
+<Fragment>
+  <div
+    className="App"
+    id="initechOrgChart"
+  >
+    <OrgChart
+      NodeComponent={[Function]}
+      tree={
+        Object {
+          "value": Object {
+            "employeeId": "250",
+            "employeeName": "Jimmy",
+            "managerId": "",
+          },
+        }
+      }
+    />
+    <RejectedList
+      data={
+        Array [
+          Object {
+            "name": Array [
+              "Martin",
+            ],
+            "reason": "Duplicate Entry of Employee",
+          },
+          Object {
+            "name": Array [
+              "100",
+            ],
+            "reason": "Manager is not a valid Employee",
+          },
+          Object {
+            "name": Array [
+              "150",
+            ],
+            "reason": "Manager is not a valid Employee",
+          },
+          Object {
+            "name": Array [
+              "400",
+            ],
+            "reason": "Manager is not a valid Employee",
+          },
+        ]
+      }
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`EmployeeTreeComponent should render only single CEO even when multiple CEO are present 1`] = `
+<Fragment>
+  <div
+    className="App"
+    id="initechOrgChart"
+  >
+    <OrgChart
+      NodeComponent={[Function]}
+      tree={
+        Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "value": Object {
+                    "employeeId": "220",
+                    "employeeName": "Martin",
+                    "managerId": "100",
+                  },
+                },
+                Object {
+                  "value": Object {
+                    "employeeId": "275",
+                    "employeeName": "Alex",
+                    "managerId": "100",
+                  },
+                },
+              ],
+              "value": Object {
+                "employeeId": "100",
+                "employeeName": "Alan",
+                "managerId": "150",
+              },
+            },
+            Object {
+              "children": Array [
+                Object {
+                  "value": Object {
+                    "employeeId": "190",
+                    "employeeName": "David",
+                    "managerId": "400",
+                  },
+                },
+              ],
+              "value": Object {
+                "employeeId": "400",
+                "employeeName": "Steve",
+                "managerId": "150",
+              },
+            },
+          ],
+          "value": Object {
+            "employeeId": "150",
+            "employeeName": "Jamie",
+            "managerId": "",
+          },
+        }
+      }
+    />
+    <RejectedList
+      data={
+        Array [
+          Object {
+            "name": Array [
+              "Jimmy",
+            ],
+            "reason": "Only on CEO can be shown in the Hierarchy",
+          },
+        ]
+      }
+    />
+  </div>
+</Fragment>
+`;
